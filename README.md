@@ -1,5 +1,7 @@
 # Qwen3-8B on Runpod
 
+[![Runpod](https://api.runpod.io/badge/kodxana/runpod-k1-qwen3-8b)](https://console.runpod.io/hub/listing/kodxana/runpod-k1-qwen3-8b)
+
 Run your own AI chat API with Qwen3-8B. This starter kit supports chat, streaming and tool calling through an OpenAI-compatible API. Thinking mode is disabled by default.
 
 You need a Runpod account with credit and a [Runpod API key](https://console.runpod.io/user/settings). The commands below use Bash and curl; on Windows, use Git Bash.
