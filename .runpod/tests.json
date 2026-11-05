@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "qwen3-8b-nonthinking-chat",
+      "input": {
+        "openai_route": "/v1/chat/completions",
+        "openai_input": {
+          "model": "qwen3-8b",
+          "messages": [
+            {
+              "role": "user",
+              "content": "Reply with exactly: Hello from Runpod!"
+            }
+          ],
+          "max_tokens": 32,
+          "temperature": 0,
+          "stream": false
+        }
+      },
+      "timeout": 600000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA GeForce RTX 4090",
+    "gpuCount": 1,
+    "env": [
+      {
+        "key": "MODEL_NAME",
+        "value": "Qwen/Qwen3-8B"
+      },
+      {
+        "key": "MODEL_REVISION",
+        "value": "b968826d9c46dd6066d109eabc6255188de91218"
+      },
+      {
+        "key": "OPENAI_SERVED_MODEL_NAME_OVERRIDE",
+        "value": "qwen3-8b"
+      },
+      {
+        "key": "TRUST_REMOTE_CODE",
+        "value": "false"
+      },
+      {
+        "key": "MAX_MODEL_LEN",
+        "value": "8192"
+      },
+      {
+        "key": "GPU_MEMORY_UTILIZATION",
+        "value": "0.9"
+      },
+      {
+        "key": "DTYPE",
+        "value": "bfloat16"
+      },
+      {
+        "key": "ENABLE_AUTO_TOOL_CHOICE",
+        "value": "true"
+      },
+      {
+        "key": "TOOL_CALL_PARSER",
+        "value": "hermes"
+      },
+      {
+        "key": "MAX_NUM_SEQS",
+        "value": "8"
+      },
+      {
+        "key": "MAX_CONCURRENCY",
+        "value": "8"
+      },
+      {
+        "key": "VLLM_EXTRA_ARGS",
+        "value": "--default-chat-template-kwargs '{\"enable_thinking\":false}'"
+      }
+    ],
+    "allowedCudaVersions": [
+      "13.0",
+      "13.1",
+      "13.2",
+      "13.3",
+      "13.4"
+    ]
+  }
+}
